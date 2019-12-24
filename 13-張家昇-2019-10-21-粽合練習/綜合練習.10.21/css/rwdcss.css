@@ -1,0 +1,325 @@
+html body{
+    margin: 0;
+
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#navbar {
+    width: 250px;
+    height: 100vh;
+    background-color: dimgray;
+    float: left;
+
+}
+
+#content {
+    width: calc(100% - 250px);
+    height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/07/18/06/mushrooms-4533193_960_720.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    position: relative;
+}
+
+#cover {
+    width:100% ;
+    height: 100%;
+    background-color: rgba(212, 211, 212, 0.26);
+}
+
+#main {
+    width: 750px;
+    height: 450px;
+    background-color: bisque;
+    border: groove;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    top: 25%;
+}
+    
+
+#secx,#secy,#secz {
+    width: 250px;
+    height: 100%;
+    
+}
+
+#secx {
+    background-image: url('https://cdn.pixabay.com/photo/2016/08/01/17/08/tomatoes-1561565_960_720.jpg');
+    background-position: 34em -12em;
+
+
+}
+
+#secy {
+    background-image: url('https://cdn.pixabay.com/photo/2015/08/14/16/26/potatoes-888585_960_720.jpg');
+    background-position: 34em -12em;
+
+}
+
+#secz {
+    background-image: url('https://cdn.pixabay.com/photo/2018/03/25/18/19/red-shallots-3260186_960_720.jpg');
+    background-position: 16em -3em;
+}
+
+.wrap {
+    height: 650px;
+    margin: 50% 0;
+
+}
+
+.box {
+    height: 200px;
+}
+
+.logo {
+    width: 128px;
+    height: 128px;
+    background-color: brown;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: whitesmoke;
+    font:small-caps bold 48px courier;
+    text-align: center;
+    padding-top:  36px;
+    border-radius: 30%;
+
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+li {
+    padding: 20px 0;
+    text-align: center;
+    
+    
+
+}
+li a{
+    padding: 20px 60px;
+    color: white; 
+    font-size: 2em;
+    font-family:sans-serif;
+    text-decoration-line: none;
+
+    
+}
+li:hover{
+    background-color: rgba(0, 0, 0, 0.616)
+}
+li a:hover{
+    text-decoration-line: underline;
+    transition: 1s;
+}
+#secx:hover{
+    width: 40%; 
+    transition: 0.8s;
+}
+#secy:hover{
+    width: 40%; 
+    transition: 0.8s;
+}
+#secz:hover{
+    width: 40%; 
+    transition: 0.8s;
+}
+
+
+.material-icons{
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+    #secx {
+        width: 100%;
+        height: 250px;
+        
+    }
+
+    #secy {
+        width: 225px;
+        height: 450px;
+        
+    }
+
+    #secz {
+        width: 225px;
+        height: 450px;
+        
+    }
+    #secx:hover{
+        width: 100%;
+        background-position: top;
+        transition: 1s;
+        
+    }
+    #secy:hover{
+        width: 50%;
+        background-position: top;
+        transition: 1s;
+    }
+    #secz:hover{
+        width: 50%;
+        background-position: top;
+        transition: 1s;
+    }
+
+    #main {
+        top: 10%;
+        width: 450px;
+        height: 700px;
+        border: groove;
+        flex-wrap: wrap;
+        
+
+        
+    }
+    li:hover{
+    background-color: rgba(0, 0, 0, 0.616)
+    }
+    li a{
+        padding: 30px 30px;
+    }
+
+}
+@media (max-width: 768px) {
+    #navbar{
+        width: 100%;
+        height: 128px;
+
+    }
+    .wrap{
+        width: 100%;
+        height: 128px;
+        margin: 0 auto;
+    }
+    .logo{
+        margin: 0;
+        float: left;
+    }
+    .box{
+        display: none;
+    }
+    ul{
+        display: inline;
+        position: relative;
+        top: 43px;
+        padding-left: 220px;
+    }
+    ul li{
+        display: inline;
+        padding: 50px 3px;
+        text-align: center;
+    }
+    li a{
+        padding: 38px 0px;
+    }
+    #content{
+        width: 100%;
+    }
+    #main{
+        width: 80% ;
+        
+        
+    }
+    #secx{
+    width: 100%;
+    background-position: center;
+    }
+    #secy,#secz{
+        width: 50%;
+        background-position: center;
+    }
+    li:hover{
+    background-color: rgba(0, 0, 0, 0.616)
+}
+
+}
+@media (max-width: 375px){
+    
+    #content{
+        height: 100%;
+    }
+    
+    #secx,#secy,#secz{
+        width: 100%;
+    }
+    #secx,#secz{
+        height: 30%;
+
+    }
+    #secy{
+        height: 40%;
+    }
+    ul{
+        top: 13px;
+        margin:  0;
+        padding: 0;
+        z-index: 5;
+        left: 0px;
+        background-color: rgba(127, 255, 212, 0.39);             
+        
+    }
+    ul li{
+        display:none;
+        padding: 0;
+        background-color: rgba(127, 255, 212, 0.39);
+        
+    
+    }
+     .wrap{ 
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 80%;
+    }
+  
+    .hovbtn{
+        
+        background-color: rgb(39, 108, 131);
+        margin: 35px 0;
+        width:50px;
+
+        
+
+    }
+    .hovbtn:hover ul li{
+        display: inline-block;
+
+    }
+    li:hover{
+    background-color: rgba(0, 0, 0, 0.616)
+    }
+    #secy:hover{
+        width: 100%;
+    }
+    #secz:hover{
+        width:100%;
+    }
+
+    li a{
+        padding: 6px;
+    }
+    .material-icons{
+        display:inline-block;
+        font-size: 50px;
+        
+    }
+   
+    
+}
+
+</style>

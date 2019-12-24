@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/fluent-design.css">
+    <title>fluent</title>
+</head>
+<body class="rooter">
+    <div id="root rooter">
+        <div class="root-66 rooter">
+            <header>
+                <div class="inner">
+                    <div class="logo">
+                        <svg viewBox="0 0 24 24">
+                            <rect class="red" height="11" width="11">
+
+                            </rect>
+                            <rect class="green" x="13" height="11" width="11">
+
+                            </rect>
+                            <rect class="blue" y="13" height="11" width="11">
+
+                            </rect>
+                            <rect class="yellow" x="13" y="13" height="11" width="11">
+
+                            </rect>
+                        </svg>
+                    </div>
+                    <div class="title"><h1>World Design System</h1></div>
+                    <div class="navigation">
+                        <ul>
+                            <li>Web</li>
+                            <li>Windows</li>
+                            <li>iOS</li>
+                            <li>Android</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="menu">
+                    <span class="top-bar"></span>
+                    <span class="mid-bar"></span>
+                    <span class="btm-bar"></span>
+                </button>
+                <nav class="item">
+                    <ul class="menu_list">
+                        <li><a href="">View Web</a></li>
+                        <li><a href="">windows</a></li>
+                        <li><a href="">ios</a></li>
+                        <li><a href="">android</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="section">
+                    <div class="container">
+                        <div class="content_sc">
+                            <div class="title"><h2>World Design System</h2></div>
+                            <div class="text">
+                                <p>Fluent brings the fundamentals of principled design, innovation in technology, and customer needs together as one. It’s a collective approach to creating simplicity and coherence through a shared, open design system across platforms.</p>
+                                <p>Open ecosystem, open design system.</p>
+                            </div>
+                        </div>
+                        <div class="media"></div>
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </main>
+            <footer></footer>
+        </div>
+    </div>
+
+   <script>
+       var btn = document.querySelector ('.menu');
+       btn.onclick = mymenu();
+       
+       function mymenu() {
+        var item = document.querySelector ('.item')
+        
+        item.classList.toggle ('menu_item')
+
+        }
+   
+   </script> 
+</body>
+</html>

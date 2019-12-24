@@ -1,0 +1,244 @@
+/* 通用 */
+.rooter{
+    height: 100%;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    box-sizing: border-box;
+    border-spacing: 0px;
+}
+body{
+    background: rgb(0, 0, 0);
+    
+}
+.root-66{
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+}
+/* header */
+.root-66 header{
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background-color: transparent;
+}
+.container{
+
+    max-width: 1136px;
+    margin: 0 auto;
+}
+.inner{
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 1136px;
+    margin: 0px auto;
+}
+.logo{
+    width: 190px;
+    height: 48px;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+.logo svg{
+    width: 16px;
+}
+.logo svg rect{
+    fill: rgb(255, 255, 255);
+    transition: all 200ms linear 0ms;
+}
+.title{
+    height: 48px;
+    width: auto;
+    align-content: center;
+    flex: 0 0 auto;
+}
+.title h1{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 49px;
+    margin: 0;
+}
+.navigation{
+    height: 48px;
+    flex: 1 1 auto;
+    padding: 0px 120px 0px 420px;
+}
+.navigation ul{
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.navigation ul li{
+    width: auto;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 49px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+}
+.menu{
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 48px;
+    width: 48px;
+    z-index: 100;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+.menu span{
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: all 200ms linear 0ms;
+}
+.menu span.top-bar{
+    top: 17px;
+    left: 12px;
+    transform: rotate(0deg);
+}
+.menu span.mid-bar{
+    top: 24px;
+    left: 12px;
+    opacity: 1;
+}
+.menu span.btm-bar{
+    top: 31px;
+    left: 12px;
+    transform: rotate(0deg);
+}
+button{
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    cursor: default;
+    font: 400 13.3333px Arial;
+}
+.menu_list{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+nav{
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 48px;
+    left: 0px;
+    height: calc(100vh - 48px);
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 10;
+    transform: translateY(0px);
+    transition: all 300ms ease 300ms;
+}
+.menu_list li{
+    width: 100%;
+    font-size: 20px;
+    opacity: 1;
+    transform: translateY(40px);
+    padding: 0px;
+    margin: 0px;
+    transition: all 300ms ease 0ms;
+}
+.menu_list li a{
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 25px 30px;
+}
+/* main_1 */
+main{
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    margin: 48px 0px 0px;
+}
+.section{
+    width: 100%;
+    margin: 145px 0px 60px;
+    display: flex;
+}
+.content_sc{
+    width: 50%;
+
+}
+.media_sc{
+    width: 50%;
+    padding: 0px 40px;
+    flex: 0 0 auto;
+}
+.section .title h2{
+    font-size: 64px;
+    line-height: 80px;
+    color: rgb(79, 229, 255);
+    font-weight: 600;
+    margin: 0px 0px 0px -6px;
+}
+/* .text p{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0px 0px 24px;
+} */
+/* media query 960px */
+@media (max-width: 960px){
+
+    .inner{
+        width: 100%;
+        padding: 0px 30px;
+    }
+    .logo{
+        width: 60px;
+    }
+    .navigation{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .menu_item{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+}
