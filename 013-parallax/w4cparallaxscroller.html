@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+    <title>scroller</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font: bolder 15px/1.8 "Lato", sans-serif;
+            color: rgb(17, 50, 71);
+            clear: both;
+
+        }
+
+        .backg-img1,
+        .backg-img2,
+        .backg-img1 {
+            position: relative;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.95;
+            clear: both;
+        }
+
+        .backg-img1 {
+            background-image: url('https://i.pinimg.com/564x/ad/01/d6/ad01d67ff6d8ae22c760102e7a619a4e.jpg');
+            min-height: 100%;
+
+
+
+        }
+
+        .backg-img2 {
+            min-height: 400px;
+            background-image: url('https://images.freeimages.com/images/large-previews/278/kitchen-table-1-1472252.jpg');
+
+
+
+
+        }
+
+        .conten1 {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            background-color: rgba(237, 238, 237, 0.24);
+        }
+
+        .conten2 {
+            position: relative;
+            top: 50px;
+            text-align: center;
+
+
+
+
+        }
+
+        .index {
+            color: rgb(255, 254, 254);
+            padding: 18px;
+            font-size: 45px;
+            font-weight: 900;
+            font-family: serif;
+            letter-spacing: 10px;
+            background-color: rgb(0, 0, 0);
+            opacity: 0.65;
+
+        }
+
+        .index2 {
+            color: antiquewhite;
+            font-size: 150px;
+            letter-spacing: 10px;
+            opacity: 0.35
+        }
+
+        #main,
+        #main2 {
+            background-color: rgba(129, 100, 36, 0.849);
+            text-align: center;
+            padding: 0 10%;
+            margin: 0;
+
+
+        }
+
+        .title {
+            letter-spacing: 7px;
+            font-size: 45px;
+            margin: 0;
+            font-family: 'Caveat', cursive;
+        }
+        #navbar{
+            display: block;
+            margin: 0;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 3;
+            width: 100%;
+            margin-top: 0;
+            background-color: rgba(255, 255, 255, 0.603);
+
+        }
+        nav{
+            font-family: serif;
+            font-size: 100%;
+            font-weight: 700;
+            
+        }
+        #navbar nav ul{
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            outline: 0;
+            padding: 0;
+            
+
+        }
+        #navbar nav ul li{
+            display: inline;
+            padding: 5px 15px;
+
+        }
+        #navbar nav ul li a{
+            font-family: "Archer SSm A", "Archer SSm B",serif;
+            font-weight: 900;
+            font-size: 25px;
+            letter-spacing: 0.31em;
+            color: black;
+            text-decoration: none;
+            padding: 9px 15px;
+            
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <nav >
+            <ul>
+                <li>
+                        <a href="#h1">I</a>
+                </li>
+                <li>
+                        <a href="#h2">II</a>
+            </ul>
+        </nav>
+    </div>
+    <div class="backg-img1">
+        <span class="conten1">
+            <span class="index">
+                breakfast</span>
+        </span>
+
+    </div>
+    <div id="main">
+        <div class="section">
+            <h1 id="h1" class="title"
+                style="letter-spacing: 7px; font-size: 45px;margin: 0;font-family: 'Caveat', cursive;">Lemon
+
+            </h1>
+            <p style="margin-bottom: 0;"><i>
+                    Vegan “Cheesy” Broccoli Soup – It’s creamy, tangy, rich & satisfying – everything you want in a
+                    cheesy broccoli soup! But this recipe is dairy-free, and there’s a whole pound of broccoli hiding
+                    inside.
+                    Carrot Ginger Soup – This is one of my weekly go-to soup recipes – it only calls for 7 ingredients!
+                    If you can get your hands on a bunch of carrots with good greens, make sure to blend up the carrot
+                    top pesto to drizzle on top.
+
+                </i></p>
+
+        </div>
+
+
+    </div>
+    <div class="backg-img2">
+        <div class="conten2">
+            <span class="index2">
+                hell yeah
+            </span>
+
+        </div>
+
+    </div>
+    <main id="main2">
+        <div class="section2">
+            <div id="h2" class="title">potato
+            </div>
+            <span class="h2"><i>
+                    Vegan Potato, Leek & Artichoke Chowder – I tested this recipe all last spring, and I promise you
+                    this: this rich & briny potato leek chowder is the perfect recipe for warming up on chilly
+                    nights.Coconut Soup with Sweet Potato & Kale – My take on Thai tom kha! Lemongrass, mint, ginger &
+                    lime make this light, spicy coconut soup a comforting, yet refreshing meal.
+                    Lasagna Soup – When you don’t feel like making lasagna, make lasagna soup! With the big, slurpy
+                    noodles and scoops of vegan ricotta, this one is fun to eat!
+                </i></span>
+
+        </div>
+
+    </main>
+    <div class="backg-img2">
+        <div class="conten2">
+            <span class="index2">
+
+            </span>
+
+        </div>
+
+        <!-- Code injected by live-server -->
+        <script type="text/javascript">
+            // <![CDATA[  <-- For SVG support
+            if ('WebSocket' in window) {
+                (function () {
+                    function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                            var elem = sheets[i];
+                            var parent = elem.parentElement || head;
+                            parent.removeChild(elem);
+                            var rel = elem.rel;
+                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                            }
+                            parent.appendChild(elem);
+                        }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + '/ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function (msg) {
+                        if (msg.data == 'reload') window.location.reload();
+                        else if (msg.data == 'refreshcss') refreshCSS();
+                    };
+                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                    }
+                })();
+            }
+            else {
+                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+	// ]]>
+        </script>
+</body>
+
+</html>
