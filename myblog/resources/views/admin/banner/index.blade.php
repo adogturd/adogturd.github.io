@@ -25,10 +25,10 @@
                         <tbody>
 
                             <tr>
-                                <td>{{ $item->alt}}</td>
-                                <td>{{ $item->img}}</td>
+                                <td>{{ $item[0]->alt}}</td>
+                                <td><img width="250" src="{{$item[0]->img}}" alt=""></td>
                                 <td>
-                                    <a class="btn btn-success btn-sm" href="/admin/banner/edit/{{ $item->id}}">編輯</a>
+                                    <a class="btn btn-success btn-sm" href="/admin/banner/edit/{{ $item[0]->id}}">編輯</a>
                                     {{-- <a class="btn btn-danger btn-sm" href="#" data-itemid="{{$item->id}}">刪除</a>
 
                                     <form class="destroy-form" data-itemid="{{$item->id}}"

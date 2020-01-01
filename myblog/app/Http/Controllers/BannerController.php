@@ -36,8 +36,15 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        Banner::create($request->all());
-        return redirect('/admin/news');
+        $requsetData = $request->all();
+
+        if($request->hasFile('img')) {
+            $file = $request->file('img');
+            $path = $this->fileUpload($file,'product');
+            $requsetData['img'] = $path;
+        }
+
+        return redirect('/admin/banner');
     }
 
     /**
@@ -75,7 +82,7 @@ class BannerController extends Controller
         $item = Banner::find($id);
         $item->update($request->all());
 
-        return redirect('/admin/news');
+        return redirect('/admin/banner');
     }
 
     /**
@@ -87,5 +94,23 @@ class BannerController extends Controller
     public function destroy($id)
     {
         //
+    }
+    private function fileUpload($file,$dir){
+        //防呆：資料夾不存在時將會自動建立資料夾，避免錯誤
+        if( ! is_dir('upload/')){
+            mkdir('upload/');
+        }
+        //防呆：資料夾不存在時將會自動建立資料夾，避免錯誤
+        if ( ! is_dir('upload/'.$dir)) {
+            mkdir('upload/'.$dir);
+        }
+        //取得檔案的副檔名
+        $extension = $file->getClientOriginalExtension();
+        //檔案名稱會被重新命名
+        $filename = strval(time().md5(rand(100, 200))).'.'.$extension;
+        //移動到指定路徑
+        move_uploaded_file($file, public_path().'/upload/'.$dir.'/'.$filename);
+        //回傳 資料庫儲存用的路徑格式
+        return '/upload/'.$dir.'/'.$filename;
     }
 }
