@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Banner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class BannerController extends Controller
@@ -43,7 +44,7 @@ class BannerController extends Controller
             $path = $this->fileUpload($file,'product');
             $requsetData['img'] = $path;
         }
-
+        Banner::create($requsetData);
         return redirect('/admin/banner');
     }
 
@@ -82,6 +83,16 @@ class BannerController extends Controller
         $item = Banner::find($id);
         $item->update($request->all());
 
+        if($request->hasFile('img')) {      //如果使用者有重新上傳圖片
+            $old_image = $item->img;        //抓取舊圖片路徑
+            File::delete(public_path().$old_image); //把舊圖片刪除
+
+            //上傳圖片
+            $file = $request->file('img');
+            $path = $this->fileUpload($file,'product');
+            $requsetData['img'] = $path;
+        }
+        $item->update($requsetData);
         return redirect('/admin/banner');
     }
 
