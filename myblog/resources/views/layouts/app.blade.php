@@ -22,7 +22,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
 
-    @yield('css')
+     @yield('css')
 </head>
 
 <body>

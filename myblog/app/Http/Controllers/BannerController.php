@@ -41,7 +41,7 @@ class BannerController extends Controller
 
         if($request->hasFile('img')) {
             $file = $request->file('img');
-            $path = $this->fileUpload($file,'product');
+            $path = $this->fileUpload($file,'upload');
             $requsetData['img'] = $path;
         }
         Banner::create($requsetData);
@@ -81,8 +81,8 @@ class BannerController extends Controller
     public function update(Request $request, $id)
     {
         $item = Banner::find($id);
-        $item->update($request->all());
-
+        
+        $requsetData = $request->all();
         if($request->hasFile('img')) {      //如果使用者有重新上傳圖片
             $old_image = $item->img;        //抓取舊圖片路徑
             File::delete(public_path().$old_image); //把舊圖片刪除

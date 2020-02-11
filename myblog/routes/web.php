@@ -19,11 +19,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //admin
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
-    // Route::get('/','AdminController@index');
-    // Route::post('/ajax_upload_img','AdminController@ajax_upload_img');
-    // Route::post('/ajax_delete_img','AdminController@ajax_delete_img');
-    // Route::post('/ajax_delete_product_imgs','AdminController@ajax_delete_product_imgs');
-    // Route::post('/ajax_sort_product_imgs','AdminController@ajax_sort_product_imgs');
+    Route::get('/','AdminController@index');
+    Route::post('/ajax_upload_img','AdminController@ajax_upload_img');
+    Route::post('/ajax_delete_img','AdminController@ajax_delete_img');
+    Route::post('/ajax_delete_product_imgs','AdminController@ajax_delete_product_imgs');
+    Route::post('/ajax_sort_product_imgs','AdminController@ajax_sort_product_imgs');
 
     Route::get('banner', 'BannerController@index');
     Route::get('banner/create', 'BannerController@create');

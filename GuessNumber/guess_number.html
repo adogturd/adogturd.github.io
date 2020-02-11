@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .card{
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>猜數字</h1>
+        <p class="info">
+            輸入一個1~100的數字
+        </p>
+        <input id="user_guess_number" type="number" min="0" max="100">
+
+        <button id="btn">送出</button>
+    </div>
+
+    <script>
+        //最後的答案 1~100
+        var answer_number = Math.floor(Math.random() * 101);
+        var btn = document.querySelector("#btn");
+        var user_guess_number;
+        var info = document.querySelector(".info");
+        var guess_round = 1;
+
+        var start_number = 0;
+        var end_number = 100;
+
+        console.log(answer_number);
+        
+
+        btn.onclick = function(){
+            //抓取input value
+            
+            user_guess_number =  parseInt(document.querySelector("#user_guess_number").value);
+           
+            if(answer_number === user_guess_number){
+                //等於 顯示成功 顯示回合數 顯示重置按鈕
+                // console.log("等於");
+
+                // info.textContent ="恭喜猜對囉 你總共花了"+guess_round+"次";
+                info.textContent =`恭喜猜對囉 你總共花了${guess_round}次`;
+
+                //顯示一個重置按鈕
+                
+            }else if(user_guess_number > answer_number){
+                //猜的數字太大 顯示失敗 縮小範圍 增加回合數
+                // console.log("猜的數字太大");
+                end_number = user_guess_number;
+
+                info.textContent =`猜錯囉 你猜的數字太大了 ,範圍: ${start_number} - ${end_number}`;
+                
+                guess_round++;
+            }else{
+                //猜的數字太小 顯示失敗 縮小範圍 增加回合數
+                // console.log("猜的數字太小");
+
+                start_number = user_guess_number;
+                info.textContent =`猜錯囉 你猜的數字太小了 ,範圍: ${start_number} - ${end_number}`;
+
+                guess_round++;
+            }
+            
+        }
+
+        
+    </script>
+</body>
+
+</html>
